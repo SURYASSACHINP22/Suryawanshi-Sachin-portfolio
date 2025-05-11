@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
-  base: './',
+  base: '/',
   publicDir: 'public',
   plugins: [
     react(),
