@@ -13,7 +13,7 @@ const HeroPic = () => {
     >
       <img
                                            //my image i need to attach
-        src="../../public/images/removed.png"
+        src="/images/removed.PNG"
         alt="Suryawanshi Sachin"
         className="max-h-[450px] w-auto"
       />
