@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
-  base: '/',
+  base: './',
   publicDir: 'public',
   plugins: [
     react(),
@@ -12,12 +12,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'motion': ['framer-motion'],
-        }
+        assetFileNames: 'assets/[name].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
       }
     },
+    assetsInlineLimit: 4096,
     chunkSizeWarningLimit: 1000
   }
 })
